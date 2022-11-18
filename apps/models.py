@@ -92,11 +92,8 @@ class Etudiant(models.Model):
     class Meta:
         ordering = ('prenom',)
 
-
-
     def __str__(self):
-        return str(
-            self.prenom + ' ' + self.nom + ' - Matricule : ' + self.matricule)
+        return str(self.prenom + ' ' + self.nom + ' - Matricule : ' + str(self.matricule))
 
 
 class Inscription(models.Model):
