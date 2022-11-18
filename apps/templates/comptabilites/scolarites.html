@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-etudiants">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants">
+
+
+              <br>
+            <div id="cadre" style="height: 82vh;">
+
+
+
+
+            <br>
+
+             <div id="menu-comptabilite">
+
+
+                    {% include 'includes/menu_scolarite.html' %}
+
+
+            </div>
+
+
+
+
+
+                <div style="" id="cadre-comptabilite" >
+
+                {% include 'includes/messages.html' %}
+
+                    <div id="photo">
+
+
+                            <img src="{% static 'apps/img/user.jpg' %}"/>
+
+
+
+
+                    </div>
+
+                    <div id="infos">
+
+                        <div id="details" style="height: 290px">
+                               <h1 style="text-align: center; margin-top: 10px; font-size: 25px; color: grey"> ANNÉE SCOLAIRE : <span style="color: red; font-weight: bold"> --------------- </span></h1> <br>
+
+                         <div id="c1">
+
+                            <h5> Matricule: <span style="color: red; font-weight: bold"> --------------- </span></h5>
+                            <h5> Nom: <span> ---------------</span></h5>
+                            <h5> Prénom: <span>---------------</span></h5>
+                            <h5> Classe: <span style="color: red; font-weight: bold">---------------</span></h5>
+                            <h5> Numéro: <span>---------------</span></h5>
+                            <h5> Date d'inscription: <span style="color: red; background-color: yellow">---------------</span></h5>
+
+
+
+
+                          </div>
+
+                          <div id="c2">
+
+                            <h5> Date de naissance: <span>---------------</span></h5>
+                            <h5> Lieu de naissance: <span>---------------</span></h5>
+                            <h5> Nom du père: <span>---------------</span></h5>
+                            <h5> Nom de la mère: <span>---------------</span></h5>
+                            <h5> Numéro d'urgence: <span>---------------</span></h5>
+                            <h5> Scolarité: <span style="color: red; font-weight: bold; background-color: yellow">---------------  GNF</span></h5>
+
+
+                          </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                <div id="cadre-paiement">
+
+
+
+
+
+                            <div id="detail-payement">
+
+                                 <br>
+                                 <h1 style="">DÉTAILS DES PAIEMENTS</h1>
+
+
+                <table class="table" id="table-payement" style="margin-top: 0px; ">
+
+                            <thead >
+                            <tr id="tete-table" style="background-color: gray; box-shadow: none">
+                                <th scope="col">Dates</th>
+                                <th scope="col">Montants</th>
+                                <th scope="col">Années</th>
+                                <th scope="col">Reçus</th>
+                                 <th scope="col">Actions</th>
+
+                            </tr>
+                            </thead>
+
+                       <tbody>
+
+                              <tr>
+
+                                  <td style=""> ----  </td>
+                                  <td  style="">   ----  </td>
+                                  <td style="color: red"> ---- </td>
+                                  <td> ---- </td>
+                                  <td>----</td>
+
+
+                              </tr>
+
+
+                       <tbody>
+
+
+                        </table>
+
+
+                        <div id="total" style=""> <span id="st1"> TOTAL : </span>
+
+
+                              <span id="st2">  GNF</span>
+
+
+
+
+                        </div><br>
+
+                       </div>
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+             <div id="info-bas-paiements">
+
+
+
+
+
+                                             <h2> IMPAYÉ : <span> 0 FG </span> <br></h2>
+
+
+
+                                   <div id="effectuer-paiement">
+
+                   <a href="{% url 'apps:effectuer-paiements' %}">
+
+                         Effectuer Paiement
+
+
+                    <span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+</svg>
+                    </span>
+
+
+                   </a>
+
+               </div>
+
+
+
+
+
+
+
+
+
+
+             </div><br>
+
+
+
+
+            </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

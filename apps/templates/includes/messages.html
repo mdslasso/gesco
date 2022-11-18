@@ -1,0 +1,20 @@
+{% load static %}
+
+
+                    {% if messages %}
+  <div  id="cadre-message"  class="alert alert-success" role="alert">
+
+
+      {% for message in messages %}
+
+         {{ message }}
+              <button type="button" class="close" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+
+      {% endfor %}
+
+
+
+</div>
+   {% endif %}

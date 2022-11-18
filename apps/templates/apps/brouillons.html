@@ -1,0 +1,94 @@
+                <div id="cadre-badges" style=" background-color: whitesmoke">
+
+                    <div id="badge">
+
+
+                        <div id="photo-etudiant">
+
+
+                       {% if etudiant.photo %}
+
+                            <img  src="{{ etudiant.photo.url }}"/>
+
+                         {% else %}
+
+                            <img src="{% static 'apps/img/user.png' %}"/>
+
+                        {% endif %}
+
+                        <h2>{{ etudiant.prenom}} {{ etudiant.nom  }}</h2>
+
+
+
+                        <div id="drapeau">
+
+                            <div class="col-md-12">
+                            <div class="row">
+                            <div class="col-md-4" id="c1"></div>
+                            <div class="col-md-4" id="c2"></div>
+                            <div class="col-md-4" id="c3"></div>
+                           </div>
+                           </div>
+
+
+
+                        </div>
+
+
+                        </div>
+
+                        <div id="infos-carte-etudiant">
+
+                            {% for etablissement in  etablissements  %}
+
+                            <div id="entete">
+
+                                <h1>{{ etablissement.nom }} <br> <span>  {{ etablissement.annee }}  </span></h1>
+
+
+                            </div>
+
+                            <div id="logo">
+
+
+                                {% if etablissement.logo %}
+
+                                  <img  src="{{ etablissement.logo.url }}"/>
+
+                                {% else %}
+
+                                   <img src="{% static 'apps/img/user.png' %}"/>
+
+                                {% endif %}
+
+
+                            </div>
+
+
+                            <div id="matricule">
+
+                                 <h5>No: <span style=""> {{ etudiant.matricule  }}</span></h5>
+
+
+
+                            </div>
+
+
+                            {% endfor %}
+
+
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>

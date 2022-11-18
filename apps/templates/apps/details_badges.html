@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-etudiants">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants">
+
+
+              <br>
+            <div id="cadre" style="height: 82vh;overflow:hidden">
+
+
+
+
+
+
+            <br>
+
+             <div id="menu-comptabilite">
+
+
+                    {% include 'includes/menu_badge.html' %}
+
+
+            </div>
+
+
+
+
+
+                <div  id="cadre-badge"  >
+
+                {% include 'includes/messages.html' %}
+
+
+                    <div id="badge" >
+
+
+
+
+                        {% if etudiant.photo %}<img id="photo-badge" src="{{ etudiant.photo.url }}"/> {% else %}<img id="photo-badge" src="{% static 'apps/img/user.png' %}"/>  {% endif %}
+
+
+                        {% for etablissement in etablissements %}
+
+                              <h1 id="annee-badge">{{etablissement.nom.upper }}</h1>
+
+                          <img id="logo-badge" src="{{etablissement.logo.url }}">
+
+                        {% endfor %}
+
+
+
+                        
+                        <img id="badge-img" style="width: 340px; height: 220px; border: 2px solid grey; border-radius: 10px; margin: auto;" src="{% static 'apps/img/badge-vierge.png' %}">
+
+
+
+                        <h1 id="nom-badge"> {{ etudiant.prenom.upper }} {{ etudiant.nom.upper }}</h1>
+                        <h1 id="naissance-badge">{{ etudiant.naissance }}</h1>
+
+                        <h1 id="matricule-badge"> Matricule : <span style="color: red; font-size: 11px"> {{ etudiant.matricule }} </span> </h1>
+
+
+
+
+                    </div>
+
+                    <input title="Imprimer le badge" id="button-imprimer"    type="button" onclick="printDiv4()" value="Imprimer le badge" /> </span>
+
+
+
+
+
+                   </div>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

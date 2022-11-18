@@ -1,0 +1,61 @@
+{% load static %}
+
+
+
+         <div id="cadre-nombre" style="width: 100%; padding: 5px; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black;">
+
+
+                       <h1 id="nombre">  <span style="color: red"> {{  charges_filters.count }} </span> charges enregistrées </h1>
+
+
+
+              </div>
+
+
+                <table class="table" id="table">
+
+                            <thead>
+                            <tr id="tete-table">
+                                <th scope="col">Descriptions</th>
+                                 <th scope="col">Mois</th>
+                                 <th scope="col">Années</th>
+                                 <th scope="col">Dates</th>
+                                 <th scope="col" style="">Montant (GNF)</th>
+
+
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+
+                            {% for charge in charges_filters%}
+
+
+                                <tr>
+
+                                    <td style="border: solid 1px black"> {{ charge.commentaire }}  </td>
+                                    <td style="border: solid 1px black">{{ charge.mois }}</td>
+                                    <td style="border: solid 1px black">{{ charge.annee }}</td>
+                                    <td style="border: solid 1px black">{{ charge.date }}</td>
+                                    <td style="border: solid 1px black;font-weight: bold; color: red">{{ charge.montant }}  GNF </td>
+
+
+
+                                </tr>
+
+
+
+                            {% endfor %}
+
+
+
+
+                            </tbody>
+
+                </table>
+
+
+
+
+

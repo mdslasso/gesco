@@ -1,0 +1,66 @@
+{% load static %}
+
+
+
+         <div id="cadre-nombre" style="width: 100%; padding: 5px; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black;">
+
+
+                       <h1 id="nombre">  <span style="color: red"> {{  salaires_filters.count }} </span> salaires versés </h1>
+
+
+
+              </div>
+
+
+                <table class="table" id="table">
+
+                            <thead>
+                            <tr id="tete-table">
+                                <th scope="col">Photo</th>
+                                <th scope="col">Matricule</th>
+                                <th scope="col">Prénom </th>
+                                <th scope="col">Nom</th>
+                                <th scope="col" style="">Mois</th>
+                                <th scope="col" style="">Années</th>
+                                <th scope="col" style="">Dates de paiement</th>
+                                <th scope="col" style="">Salaire(GNF)</th>
+
+
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+
+                            {% for salaire in salaires_filters%}
+
+
+                                <tr style=" text-align: center; font-size: 12px; border: 1px solid grey">
+
+                                    <td style="border: 1px solid grey"> {% if salaire.enseignant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ salaire.enseignant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %} </td>
+                                    <td style="border: 1px solid grey; color: red; font-weight: bold"> {{ salaire.enseignant.matricule }}  </td>
+                                    <td style="border: 1px solid grey;font-weight: bold">{{ salaire.enseignant.prenom }} </td>
+                                    <td style="border: 1px solid grey;font-weight: bold">{{ salaire.enseignant.nom }}  </td>
+                                    <td style="border: 1px solid grey;">{{ salaire.mois }}</td>
+                                    <td style="border: 1px solid grey;">{{ salaire.annee }}</td>
+                                    <td  style="border: 1px solid grey;">{{ salaire.date }}</td>
+                                   <td style=" border: 1px solid grey;color: red">{{ salaire.salaire }} GNF</td>
+
+
+                                </tr>
+
+
+
+                            {% endfor %}
+
+
+
+
+                            </tbody>
+
+                </table>
+
+
+
+
+

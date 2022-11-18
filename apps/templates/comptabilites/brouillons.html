@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-etudiants">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants">
+
+
+
+            <div id="cadre">
+
+
+
+
+                <form style="" id="form" method="post" enctype="multipart/form-data">
+
+                    <div style="text-align: center">
+
+                     {% if object.photo %}
+
+                            <img id="img-modifier" src="{{ object.photo.url }}"/> <br>
+
+                        {% else %}
+
+                            <img id="img-modifier" src="{% static 'apps/img/user.png' %}"/><br>
+
+                        {% endif %}
+                    </div>
+                <br>
+
+
+                                {% csrf_token %}
+
+                                  <fieldset class="form-group" style="margin: 10px; text-align: center">
+
+                                <legend style="">
+
+                                    SUPPRESSION DU PAIEMENT  <br>
+                                     <span style="font-size: 14px; color: grey">{{ object.etudiant }}</span><br>
+                                     <span style="font-size: 14px; color: grey">MONTANT : </span><span style="font-size: 14px; color: red"> {{ object.payement }} GNF</span><br>
+                                    <span style="font-size: 14px; color: grey">DATE PAIEMENT: </span><span style="color: red;font-size: 14px;"> {{ object.date }} </span>
+
+
+                                </legend> <br>
+
+                                <h2 style="font-size: 20px">Êtes-vous sur de vouloir supprimer cet paiement ? <br>
+                                    <p style="margin-top: 5px; font-size: 14px; color: red"> Il sera définitivement
+                                        supprimer de la base de données. </p></h2>
+
+                            </fieldset>
+
+
+                                <br><br>
+
+                                <div class="form-group" style="margin: 10px; text-align: center">
+
+                                    <a  class="btn btn-success" href="{% url 'apps:details-paiements' object.etudiant.id%}" >Annuler</a>
+                                    <button  class="btn btn-danger" type="submit">Supprimer</button>
+
+                                </div>
+                                <br><br>
+
+
+                            </form>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-home">
+
+
+
+                <div id="mini" >
+
+                    <img src="{% static 'apps/img/etudiant.png' %}"><br><br>
+
+                    <a href="{% url 'apps:etudiants' %}">Étudiants</a>
+
+                </div>
+
+                <div id="mini" >
+
+                    <img src="{% static 'apps/img/enseignant.png' %}"><br><br>
+
+
+                    <a href="">Enseignants</a>
+
+                </div>
+
+
+
+
+
+
+
+         <div id="mini" >
+
+                    <img src="{% static 'apps/img/comptabilite.png' %}"><br><br>
+
+
+                    <a href="">Comptabilité</a>
+
+
+                </div>
+
+
+         <div id="mini" >
+
+                    <img src="{% static 'apps/img/parametres.png' %}"><br><br>
+
+
+                    <a href="">Configuration</a>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

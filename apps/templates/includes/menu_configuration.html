@@ -1,0 +1,59 @@
+{% load static %}
+
+
+        <h1 style="font-weight: bold">CONFIGURATIONS</h1>
+
+                 <div id="menu-etablissement" >
+
+
+
+                         <li>
+                             <span><img src="{% static 'apps/img/etablissement.png' %}"></span>
+                             {% for etablissement in  etablissements %}
+
+                             <a href="{% url 'apps:configurer-etablissement' etablissement.id %}">Établissement</a>
+
+
+
+                             {% endfor %}
+                         </li>
+
+                         <li>
+                              <span><img src="{% static 'apps/img/annee.png' %}"></span>
+                             <a href="{% url 'apps:rentree-scolaire' %}">Rentrée Scolaire</a>
+                         </li>
+
+                         <li>
+                              <span><img src="{% static 'apps/img/matiere.png' %}"></span>
+                             <a href="{% url 'apps:matieres' %}">Matières</a>
+                         </li>
+
+                         <li>
+                              <span><img src="{% static 'apps/img/classe.png' %}"></span>
+                             <a href="{% url 'apps:classes' %}">Classes</a>
+                         </li>
+
+
+
+                       {% if user.is_superuser %}
+                         <li>
+                              <span><img src="{% static 'apps/img/user.png' %}"></span>
+                             <a href="{% url 'apps:utilisateurs' %}">Utilisateurs</a>
+                         </li>
+
+                         {% else %}
+
+                           <li>
+                              <span><img src="{% static 'apps/img/user.png' %}"></span>
+                              <a href="">Utilisateurs</a>
+                         </li>
+
+
+
+                  {% endif  %}
+
+
+
+
+
+                 </div>

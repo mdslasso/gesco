@@ -1,0 +1,12 @@
+CONVERTISSEZ SITE WEB EN APPLICATION DE BUREAU
+https://github.com/nativefier/nativefier ( Tuto)
+
+https://nodejs.org/en/ ( Installer Note Js)
+npm install -g nativefier ( Installer nativefier)
+nativefier "http://127.0.0.1:8000/"
+
+ nativefier --name 'Gesco' 'http://127.0.0.1:8000/'
+ python manage.py collectstatic
+
+
+

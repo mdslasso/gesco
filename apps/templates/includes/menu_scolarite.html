@@ -1,0 +1,79 @@
+{% load static %}
+{% load class_name %}
+
+               <h1>SCOLARITÉS</h1>
+
+
+
+
+                                <form style="" method='get' action="{% url 'apps:search-paiements' %}" class="navbar-form navbar-right" role="search">
+
+                                    <input id="search-form"
+                                           style="background-image: url( '{% static 'apps/img/search.png' %}')" name="q"
+                                           type="search" minlength="3" placeholder="Matricule, Nom, Prénom "
+                                           class="form-control"/>
+
+                                </form>
+
+
+
+                 <div id="comptabilite">
+
+                                      {% if  query %}
+
+                       {% for inscription in object_list %}
+
+                                {% with inscription|class_name as klass %}
+
+                                    <li>
+
+                            <span> {% if inscription.etudiant.photo %}<img style="width: 30px; height: 30px; border-radius: 200px" src="{{ inscription.etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %}</span>
+
+
+
+
+                             <a href="{% url 'apps:details-paiements' inscription.id %}"> <span style="color: red; font-size: 11px">  {{ inscription.etudiant.matricule }}  </span> - {{ inscription.etudiant.prenom }} {{ inscription.etudiant.nom }} </a> -
+
+                              <span style="color: grey; font-size: 10px"> {{ inscription.classe }} -  {{ inscription.annee }} </span>
+                         </li>
+
+
+
+                           {% endwith %}
+
+                         {% empty %}
+
+                        {% endfor %}
+
+
+                         {% else %}
+
+                      {% for inscription in inscriptions %}
+
+
+                         <li>
+
+                            <span> {% if inscription.etudiant.photo %}<img style="width: 30px; height: 30px; border-radius: 200px" src="{{ inscription.etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %}</span>
+
+
+
+
+                             <a href="{% url 'apps:details-paiements' inscription.id %}"> <span style="color: red; font-size: 11px">  {{ inscription.etudiant.matricule }}  </span> - {{ inscription.etudiant.prenom }} {{ inscription.etudiant.nom }} </a> -
+
+                              <span style="color: grey; font-size: 10px"> {{ inscription.classe }} -  {{ inscription.annee }} </span>
+                         </li>
+
+                         {% endfor %}
+
+
+
+                  {% endif %}
+
+
+
+                 </div>
+
+
+
+
+

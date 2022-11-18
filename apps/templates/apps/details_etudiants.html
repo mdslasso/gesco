@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load django_template_maths %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants" >
+
+
+
+
+              {% include 'includes/messages.html' %}
+
+
+            <div id="cadre" style="">
+
+
+                <div style="" id="cadre-details-infos" >
+
+                    <div id="photo">
+
+                        {% if etudiant.photo %}
+
+                            <img  src="{{ etudiant.photo.url }}"/>
+
+                        {% else %}
+
+                            <img src="{% static 'apps/img/user.png' %}"/>
+
+                        {% endif %}
+
+                      <p><a href="{% url 'apps:changer-photo' etudiant.id %}">Changer photo</a></p>
+
+                    </div>
+
+                    <div id="infos">
+
+                        <div id="details">
+
+
+
+
+                            <h1 style="text-align: center; margin-top: 10px; font-size: 25px; color: grey; box-shadow: 2px 2px 2px 2px"> MATRICULE : <span style="color: red; font-weight: bold"> {{  etudiant.matricule  }}</span>
+
+
+                                <div style="float: right;">
+
+                      <a style="margin-left: -20px" href="{% url 'apps:etudiants' %}">
+
+                          <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                          </span>
+
+
+
+                      </a>
+
+
+                   </div>
+                            </h1>
+
+                         <div id="c1">
+
+                            <h5> Nom: <span>{{ etudiant.nom  }}</span></h5>
+                            <h5> Prénom: <span>{{ etudiant.prenom  }}</span></h5>
+                            <h5> Numéro: <span>{{ etudiant.numero  }}</span></h5>
+                            <h5> Numéro en cas d'urgence: <span>{{ etudiant.urgent  }}</span></h5>
+
+
+                          </div>
+
+                          <div id="c2">
+
+                            <h5> Date de naissance: <span>{{ etudiant.naissance  }}</span></h5>
+                            <h5> Lieu de naissance: <span>{{ etudiant.lieu  }}</span></h5>
+                            <h5> Nom du père: <span>{{ etudiant.pere  }}</span></h5>
+                            <h5> Nom de la mère: <span>{{ etudiant.mere  }}</span></h5>
+
+
+
+                          </div>
+
+
+
+                             <div id="info-bas-details">
+
+
+                                <li><a class="btn btn-success" href="{% url 'apps:modifier-etudiants' etudiant.id%}">Modifier</a></li>
+                                <li><a class="btn btn-danger" href="{% url 'apps:supprimer-etudiants' etudiant.id%}">Supprimer</a></li><br><br>
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

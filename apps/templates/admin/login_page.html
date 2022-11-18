@@ -1,0 +1,45 @@
+{% extends 'base_login.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+
+
+
+    <div  class="container">
+
+            <form id="form-login" method="post" enctype="multipart/form-data">
+
+                <h1 style="text-align: center">GESCO</h1><br>
+
+                {% csrf_token %}
+
+                {{ form|crispy }}
+
+
+                <div class="form-group">
+                    <br>
+
+                    <button class="btn btn-danger" type="submit">Se Connecter</button>
+
+                </div><br><br><br><br>
+
+            </form>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
+

@@ -1,0 +1,67 @@
+{% load static %}
+{% load class_name %}
+
+
+
+               <h1>ÉTUDIANTS</h1>
+
+
+
+
+                                <form style="" method='get' action="{% url 'apps:search-badges' %}" class="navbar-form navbar-right" role="search">
+
+                                    <input id="search-form"
+                                           style="background-image: url( '{% static 'apps/img/search.png' %}')" name="q"
+                                           type="search" minlength="3" placeholder="Matricule, Nom, Prénom "
+                                           class="form-control"/>
+
+                                </form>
+
+
+
+                 <div id="comptabilite" style="height: 520px;">
+
+
+                       {% if  query %}
+
+                            {% for etudiant in object_list %}
+
+                                {% with etudiant|class_name as klass %}
+
+                                   <li>
+                                    <span> {% if etudiant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %}</span>
+                                   <a href="{% url 'apps:details_badges' etudiant.id %}">  {{ etudiant.prenom }} {{ etudiant.nom }}  </a>- <span style="color:grey ; font-size: 12px">  Matricule : {{ etudiant.matricule }} </span>
+
+                                   </li>
+
+
+
+                           {% endwith %}
+
+                         {% empty %}
+
+                        {% endfor %}
+
+
+                       {% else %}
+
+                        {% for etudiant in etudiants_home %}
+
+
+                         <li>
+                             <span> {% if etudiant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %}</span>
+                             <a href="{% url 'apps:details_badges' etudiant.id %}">  {{ etudiant.prenom }} {{ etudiant.nom }}  </a>- <span style="color:grey ; font-size: 12px">  Matricule : {{ etudiant.matricule }} </span>
+
+                         </li>
+
+                         {% endfor %}
+
+
+                         {% endif %}
+
+
+
+
+                 </div>
+
+

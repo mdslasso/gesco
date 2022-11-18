@@ -1,0 +1,75 @@
+{% load static %}
+
+
+
+         <div id="cadre-nombre" style="width: 100%; padding: 5px; border-top: 1px solid black; border-left: 1px solid black; border-right: 1px solid black;">
+
+
+                       <h1 id="nombre">  <span style="color: red"> {{  inscriptions_filters.count }} </span> ÉTUDIANTS INSCRITS </h1>
+
+
+
+              </div>
+
+                <table id="table">
+
+                            <thead>
+                            <tr id="tete-table" style="font-size: 15px">
+                                <th scope="col">Photo</th>
+                                <th scope="col">Matricule</th>
+                                <th scope="col">Prénom </th>
+                                <th scope="col">Nom</th>
+                                <th scope="col" style="">Naissance</th>
+                                <th scope="col" style="">Classes</th>
+                                <th scope="col" style="">Années Scolaire</th>
+                            </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+
+
+
+
+                            {% for inscription in inscriptions_filters %}
+
+
+                                <tr style=" text-align: center; font-size: 12px">
+
+                                    <td style="border: solid 1px black"> {% if inscription.etudiant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ inscription.etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %} </td>
+                                    <td style="border: solid 1px black;"> {{ inscription.etudiant.matricule }}  </td>
+                                    <td style="border: solid 1px black;">{{ inscription.etudiant.prenom }} </td>
+                                    <td style="border: solid 1px black;">{{ inscription.etudiant.nom }}  </td>
+                                    <td style="border: solid 1px black">{{ inscription.etudiant.naissance }}</td>
+                                    <td style="border: solid 1px black; ">{{ inscription.classe }}</td>
+                                    <td style=" border: solid 1px black;">{{ inscription.annee }}</td>
+
+
+
+                                </tr>
+
+
+
+
+
+                            {% endfor %}
+
+
+
+
+
+
+
+
+                            </tbody>
+
+                </table>
+
+
+
+
+
+

@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load class_name %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-etudiants">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants">
+
+                        <div class="row" id="row-etudiants">
+
+
+                            <div class="col-md-9">
+                                <form style="" method='get' action="{% url 'apps:search-enseignants' %}"
+
+                                      class="navbar-form navbar-right" role="search">
+
+                                    <input id="search-form"
+                                           style="background-image: url( '{% static 'apps/img/search.png' %}')" name="q"
+                                           type="search" minlength="3" placeholder="Nom, Prénom, Matricule, Numéro ."
+                                           class="form-control"/>
+
+                                </form>
+                            </div>
+
+
+                            <div class="col-md-3" style="margin-top: 10px; font-size: 12px"><a href="{% url 'apps:ajouter-enseignants' %}" style="float: right">+ Ajouter un nouveau enseignant</a></div>
+
+                        </div>
+
+
+
+
+        <div id="cadre-nombre">
+
+                       <h1 id="nombre">
+                            {% if  query == "" %}
+
+                         <span style="color: red"> Veuillez saisir un mot cle dans la bare de recherche .... </span>
+
+
+                       {% else %}
+
+
+
+                        {% if  count > 1 %}
+
+
+                          <span>  <span style="font-weight: bold; color:red;"> {{ count }}</span>  résultats  trouvés   pour <span style="font-weight: bold; color:red;">{{ query }}</span></span>
+
+                        {% elif  count == 1 %}
+
+                           <span>  <span style="font-weight: bold; color:red;"> {{ count }}</span>    résultat  trouvé   pour <span style="font-weight: bold; color:red;">{{ query }}</span></span>
+
+                          {% elif  count == 0 %}
+
+                           <span>  <span style="font-weight: bold; color:red;"> {{ count }}</span>    résultat  trouvé   pour <span style="font-weight: bold; color:red;">{{ query }}</span></span>
+                       {% endif  %}
+
+
+                 {% endif  %}
+
+
+                       </h1>
+
+              </div>
+            <div id="cadre">
+
+
+
+                <table class="table" id="table" >
+
+                            <thead>
+                            <tr id="tete-table">
+                                <th scope="col">Photo</th>
+                                <th scope="col">Matricule</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col" style="">Naissance</th>
+                                <th scope="col" style="">Numéro</th>
+                                <th scope="col">Détails</th>
+
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+
+
+                            {% for enseignant in object_list %}
+
+                                {% with enseignant|class_name as klass %}
+
+                                {% if  query %}
+
+                                <tr>
+
+                                    <td style=""> {% if enseignant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ enseignant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %} </td>
+                                    <td style="color: red; font-weight: bold"> {{ enseignant.matricule }}  </td>
+                                    <td style="font-weight: bold"> {{ enseignant.prenom }}  </td>
+                                    <td style="font-weight: bold"> {{ enseignant.nom }} </td>
+                                    <td style="">{{ enseignant.naissance }}</td>
+                                    <td style="">{{enseignant.numero }}</td>
+
+
+
+
+
+
+                                    <td style="text-align: center"><a href="{% url 'apps:details-enseignants' enseignant.id%}" style=" text-decoration: none;">Afficher</a></td>
+
+
+
+
+                                </tr>
+
+
+                            {% endif %}
+
+
+
+                           {% endwith %}
+
+                         {% empty %}
+                        {% endfor %}
+
+
+                            </tbody>
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

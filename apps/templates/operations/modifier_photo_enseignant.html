@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-etudiants">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants">
+
+
+
+            <div id="cadre">
+
+
+
+                <br>
+                <form style="text-align: center" id="form" method="post" enctype="multipart/form-data">
+
+                     {% if enseignant.photo %}
+
+                            <img id="img-modifier" src="{{ enseignant.photo.url }}"/> <br>
+
+                        {% else %}
+
+                            <img id="img-modifier" src="{% static 'apps/img/user.png' %}"/><br>
+
+                        {% endif %}
+                <br>
+
+
+                                {% csrf_token %}
+                                {{ form|crispy }}
+
+                                <br><br>
+
+                                <div class="form-group" style="margin: 10px; text-align: center">
+
+                                    <a  class="btn btn-success" href="{% url 'apps:details-enseignants' enseignant.id %}" >Annuler</a>
+                                    <button  class="btn btn-danger" type="submit">Modifier</button>
+
+                                </div>
+                                <br><br>
+
+
+                            </form>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

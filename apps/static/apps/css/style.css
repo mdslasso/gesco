@@ -1,0 +1,1871 @@
+
+body {
+    background-color: white;
+
+}
+
+body a {
+    text-decoration: none;
+}
+
+
+#form-login {
+    width: 30%;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+
+#header {
+
+    background-color: gainsboro;
+    height: 20px;
+
+
+}
+
+#header a {
+    float: right;
+    margin: 15px;
+    color: red;
+    font-weight: bold;
+
+}
+
+#header a:hover {
+    color: black;
+
+}
+
+#header svg {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+}
+
+
+#container {
+
+
+}
+
+#cadre-home {
+    width: 90%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+
+}
+
+#cadre-home #mini {
+    width: 15%;
+    height: 180px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 2px 2px 2px 2px black;
+    margin: 5px;
+
+
+}
+
+#cadre-home #mini a {
+    font-size: 18px;
+    margin-top: 15px;
+    color: lightskyblue;
+
+
+}
+
+#cadre-home #mini a:hover {
+
+    color: red;
+
+
+}
+
+#cadre-home #mini img {
+
+    width: 80px;
+    margin-top: 10px;
+
+
+}
+
+#cadre-home #mini svg {
+
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+
+
+}
+
+
+#menu-etudiants {
+    width: 13%;
+    height: 90vh;
+    background-color: #222222;
+    float: left;
+    position: relative;
+
+
+}
+
+#menu-etudiants #cadre-admin {
+    height: 45px;
+    margin: auto;
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px black;
+
+
+}
+
+
+#menu-etudiants #cadre-admin img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+
+
+}
+
+
+#menu-etudiants #cadre1 {
+    height: 73vh;
+    margin-top: 15px;
+
+
+}
+
+
+#menu-etudiants #home {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: black;
+
+}
+
+
+#menu-etudiants #home a {
+    color: whitesmoke;
+}
+
+#menu-etudiants #home a:hover {
+    color: grey;
+}
+
+
+#cadre1 {
+
+
+}
+
+
+#menu-etudiants #cadre1 li {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+#menu-etudiants #cadre1 li a {
+    color: grey;
+    margin-left: 5px;
+    font-size: 14px;
+
+}
+
+
+#menu-etudiants #cadre1 li a:is(link,:active, :visited) {
+    color: grey;
+    margin-left: 5px;
+    font-size: 14px;
+
+}
+
+#menu-etudiants #cadre1 li a:is(link,:active, :visited).active {
+    color: white;
+    margin-left: 5px;
+    font-size: 14px;
+
+}
+
+#menu-etudiants #cadre1 li a:hover {
+    color: whitesmoke;
+
+
+}
+
+#menu-etudiants #cadre1 li span {
+    color: whitesmoke;
+    font-size: 12px;
+
+}
+
+#menu-etudiants #cadre1 li svg {
+    width: 18px;
+    height: 18px;
+    color: whitesmoke;
+    margin-top: -5px;
+
+}
+
+
+#menu-etudiants #cadre1 li img {
+    width: 18px;
+    height: 18px;
+    color: whitesmoke;
+    margin-top: -5px;
+
+}
+
+#menu-etudiants h1 {
+    font-size: 15px;
+    color: grey;
+    margin-left: 10px;
+    margin-top: 15px;
+
+
+}
+
+#menu-etudiants h1 svg {
+    width: 15px;
+    height: 15px;
+}
+
+#infos-etudiants {
+
+    width: 87%;
+    height: 90vh;
+    background-color: gainsboro;
+    float: right;
+    margin-top: -5px;
+
+}
+
+
+#row-etudiants {
+    width: 96%;
+    margin: auto;
+    margin-top: 10px;
+
+
+}
+
+
+#cadre-details-infos {
+    width: 95%;
+    margin: auto;
+    height: 300px;
+    background-color: white;
+
+
+}
+
+#cadre-details-infos #photo {
+    width: 23%;
+    height: 150px;
+    float: left;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-top: 10px;
+
+
+}
+
+#cadre-details-infos #photo img {
+    width: 100px;
+    height: 100px;
+    margin-top: 5px;
+    border-radius: 3px;
+
+
+}
+
+#cadre-details-infos #photo p {
+    margin-top: 8px;
+
+
+}
+
+#cadre-details-infos #photo a {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    border-radius: 3px;
+
+
+}
+
+#cadre-details-infos #infos {
+    width: 77%;
+    background-color: white;
+    float: right;
+
+}
+
+#cadre-details-infos #infos #details {
+    height: 300px;
+    margin: 5px;
+    background-color: whitesmoke;
+
+
+}
+
+
+#cadre-details-infos #infos #details h5 {
+    font-size: 13px;
+    font-weight: bold;
+
+
+}
+
+
+#cadre-details-infos #infos #details #statut h2 span {
+    background-color: yellow;
+
+}
+
+#cadre-details-infos #infos #details #statut h2 p {
+
+    font-size: 13px;
+    margin-left: 5px;
+    cursor: no-drop;
+    margin-top: 10px;
+    color: cornflowerblue;
+
+}
+
+#cadre-details-infos #infos #details #statut h2 p:hover {
+    color: black;
+
+}
+
+#detail-payement {
+    width: 95%;
+    margin: auto;
+    height: 230px;
+    background-color: white;
+    overflow: auto;
+
+}
+
+
+#table-payement {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+
+#total {
+    width: 90%;
+    margin: auto;
+    height: 30px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px black;
+
+
+}
+
+
+#total #st1 {
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 5px;
+
+}
+
+#total #st2 {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 5px;
+
+}
+
+#info-bas {
+    width: 95%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    padding: 10vh;
+
+
+}
+
+
+#info-bas-enseignant {
+
+    width: 100%;
+    background-color: whitesmoke;
+    margin: auto;
+    text-align: center;
+    margin-top: 120px;
+
+
+}
+
+
+#info-bas-enseignant #afficher {
+
+    font-size: 12px;
+
+}
+
+#info-bas-enseignant li {
+
+    display: inline-block;
+
+}
+
+
+#info-bas-details {
+
+    width: 100%;
+    background-color: whitesmoke;
+    margin: auto;
+    text-align: center;
+    margin-top: 180px;
+
+
+}
+
+
+#info-bas-details #afficher {
+
+    font-size: 12px;
+
+}
+
+#info-bas-details li {
+
+    display: inline-block;
+
+}
+
+
+#info-bas h1 {
+    font-size: 40px;
+
+
+}
+
+#info-bas h2 {
+
+    font-size: 80px;
+    color: black;
+    font-weight: bold;
+
+
+}
+
+#info-bas h2 span {
+
+    color: red;
+
+
+}
+
+
+#cadre-details-infos #infos #details h2 span {
+
+    color: red;
+
+
+}
+
+
+#cadre-details-infos #infos #details h5 {
+    margin: 10px;
+
+
+}
+
+
+#cadre-details-infos #infos #details h5 span {
+    font-size: 12px;
+    font-weight: normal;
+
+
+}
+
+#cadre-details-infos #infos #details #c1 {
+    width: 47%;
+    float: left;
+    margin: 5px;
+    background-color: white;
+
+
+}
+
+#cadre-details-infos #infos #details #c2 {
+    width: 47%;
+    float: right;
+    margin: 5px;
+    background-color: white;
+
+
+}
+
+
+#cadre-badges {
+    width: 48%;
+    height: 300px;
+    background-color: wheat;
+    float: right;
+    margin: 5px;
+    margin-top: 10px;
+
+
+}
+
+
+#cadre-badges h1 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: whitesmoke;
+
+
+}
+
+#cadre-badges #badge {
+    width: 325px;
+    height: 204px;
+    box-shadow: 2px 2px 2px 2px black;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: black;
+
+}
+
+#cadre-badges #badge #entete {
+    height: 50px;
+    background-color: black;
+    width: 100%;
+
+
+}
+
+#cadre-badges #badge #entete h1 {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+
+
+}
+
+#cadre-badges #badge #entete h1 span {
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+
+
+}
+
+
+#cadre-badges #photo-etudiant {
+
+    width: 50%;
+    float: left;
+    height: 204px;
+    background-color: whitesmoke;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 50px;
+    text-align: center;
+
+
+}
+
+#cadre-badges #photo-etudiant #drapeau {
+    width: 30%;
+    height: 30px;
+    margin-top: 10px;
+    margin: auto;
+
+}
+
+#cadre-badges #photo-etudiant #drapeau #c1 {
+    height: 20px;
+    background-color: red;
+
+
+}
+
+#cadre-badges #photo-etudiant #drapeau #c2 {
+    height: 20px;
+    background-color: yellow;
+
+}
+
+#cadre-badges #photo-etudiant #drapeau #c3 {
+    height: 20px;
+    background-color: green;
+
+}
+
+#cadre-badges #photo-etudiant img {
+    width: 90px;
+    height: 100px;
+    margin-top: 30px;
+
+}
+
+#cadre-badges #photo-etudiant h2 {
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+
+
+}
+
+
+#cadre-badges #infos-carte-etudiant {
+
+    width: 50%;
+    float: right;
+    height: 190px;
+    background-color: white;
+    margin-top: 14px;
+    border-bottom-right-radius: 10px;
+
+
+}
+
+
+#cadre-badges #infos-carte-etudiant #logo {
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+
+
+}
+
+#cadre-badges #infos-carte-etudiant #logo img {
+    width: 100px;
+    height: 100px;
+
+
+}
+
+
+#cadre-badges #infos-carte-etudiant #matricule {
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    border-bottom-right-radius: 5px;
+
+
+}
+
+#cadre-badges #infos-carte-etudiant #matricule h5 {
+    font-size: 12px;
+    margin-top: 14px;
+
+
+}
+
+#cadre-badges #infos-carte-etudiant #matricule h5 span {
+
+
+}
+
+#badge-download {
+    width: 300px;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+
+
+}
+
+
+#search-form {
+    width: 300px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+
+}
+
+
+#infos-etudiants #cadre {
+
+    width: 95%;
+    margin: auto;
+    height: 75vh;
+    background-color: white;
+
+
+}
+
+
+#cadre-nombre {
+    width: 95%;
+    margin: auto;
+
+}
+
+#cadre-nombre #nombre {
+
+    text-align: center;
+    font-size: 12px;
+    margin-top: 4px;
+    font-weight: bold;
+
+
+}
+
+#cadre-etablissement {
+    text-align: center;
+
+}
+
+#cadre-etablissement img {
+
+    width: 300px;
+    height: 300px;
+    margin: auto;
+
+}
+
+#etablissements {
+    width: 300px;
+    margin: auto;
+    color: grey;
+    font-size: 14px;
+}
+
+#etablissements span {
+    color: black;
+
+}
+
+#titre-operation {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+
+#classe-form {
+
+
+}
+
+#classe-form select {
+    font-size: 12px;
+    color: grey;
+    padding: 5px;
+
+}
+
+#classe-form label {
+    font-size: 14px;
+    color: black;
+
+
+}
+
+
+#form {
+    width: 50%;
+    margin: auto;
+
+
+}
+
+#form input {
+    background-color: whitesmoke;
+
+
+}
+
+#form label {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+#form #img-modifier {
+
+    width: 200px;
+    height: 200px;
+
+
+}
+
+
+#form #div_id_photo label {
+    visibility: hidden;
+    position: absolute;
+
+
+}
+
+.form #div_id_numero {
+
+    float: right;
+
+
+}
+
+
+#photo-clear_id {
+    visibility: hidden;
+    position: absolute;
+
+
+}
+
+#menu-annee {
+    width: 15%;
+    height: 75vh;
+    background-color: whitesmoke;
+    float: left;
+    margin-left: 5px;
+
+
+}
+
+#menu-annee h1 {
+    font-size: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+
+}
+
+#menu-annee #annee {
+    width: 90%;
+    margin: auto;
+    height: 70vh;
+    background-color: white;
+    overflow: auto;
+
+}
+
+#menu-annee #annee li {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid whitesmoke;
+    padding: 5px;
+    font-size: 12px;
+
+}
+
+#menu-annee #annee li a {
+    font-size: 12px;
+}
+
+#menu-annee #annee li a:hover {
+    color: red;
+}
+
+
+#menu-comptabilite {
+    width: 25%;
+    height: 600px;
+    background-color: white;
+    float: left;
+    margin-left: 5px;
+
+
+}
+
+
+#menu-comptabilite form {
+    width: 100%;
+    margin: auto;
+
+
+}
+
+#menu-comptabilite h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+
+
+}
+
+#menu-comptabilite form input {
+    background-color: whitesmoke;
+
+
+}
+
+
+#menu-comptabilite #comptabilite {
+    width: 100%;
+    margin: auto;
+    height: 520px;
+    background-color: white;
+    overflow: auto;
+    margin-top: 5px;
+    box-shadow: 2px 2px 2px 2px whitesmoke;
+
+}
+
+#effectuer-paiement {
+    float: right;
+
+
+}
+
+#effectuer-paiement a {
+    background-color: whitesmoke;
+    padding: 10px;
+    color: black;
+    box-shadow: 2px 2px 2px 2px black;
+
+
+}
+
+#effectuer-paiement a:hover {
+    background-color: black;
+    color: whitesmoke;
+
+
+}
+
+
+#menu-comptabilite #comptabilite li {
+    display: block;
+    margin: 5px;
+    border-bottom: 1px solid wheat;
+    padding: 5px;
+
+}
+
+#menu-comptabilite #comptabilite li a {
+    font-size: 13px;
+
+}
+
+
+#cadre-comptabilite {
+    width: 74%;
+    height: 600px;
+    float: right;
+    background-color: whitesmoke;
+
+
+}
+
+#cadre-comptabilite #photo {
+    width: 25%;
+    float: left;
+    background-color: whitesmoke;
+
+}
+
+#cadre-comptabilite #photo img {
+    width: 100%;
+    height: 250px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+#cadre-comptabilite #infos {
+    width: 70%;
+    height: 300px;
+    float: right;
+    background-color: whitesmoke;
+
+}
+
+
+#cadre-comptabilite #infos #c1 {
+    width: 50%;
+    float: left;
+    overflow: auto;
+    background-color: whitesmoke;
+
+}
+
+#cadre-comptabilite #infos #c2 {
+    width: 50%;
+    float: right;
+    overflow: auto;
+    background-color: whitesmoke;
+
+}
+
+
+#cadre-comptabilite #infos #details {
+
+    height: 300px;
+    margin: 5px;
+    background-color: whitesmoke;
+
+
+}
+
+
+#cadre-comptabilite #infos #details h5 {
+    font-size: 13px;
+    font-weight: bold;
+
+
+}
+
+#cadre-comptabilite #infos #details h5 span {
+    color: grey;
+
+
+}
+
+
+#cadre-paiement {
+    width: 100%;
+    background-color: whitesmoke;
+
+
+}
+
+
+#cadre-paiement #detail-payement {
+    width: 100%;
+
+
+}
+
+#cadre-paiement h1 {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+
+}
+
+#info-bas-paiements {
+
+
+}
+
+#info-bas-paiements h2 {
+    text-align: center;
+    background-color: whitesmoke;
+    font-weight: bold;
+
+
+}
+
+#info-bas-paiements h2 span {
+    color: red;
+
+
+}
+
+#cadre-comptabilite #infos #details #statut h2 span {
+    background-color: yellow;
+
+}
+
+#cadre-comptabilite #infos #details #statut h2 p {
+
+    font-size: 13px;
+    margin-left: 5px;
+    cursor: no-drop;
+    margin-top: 10px;
+    color: cornflowerblue;
+
+}
+
+
+#menu-annee h1 {
+    font-size: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+
+}
+
+
+#cadre-inscription {
+    width: 84%;
+    height: 75vh;
+    float: right;
+    overflow: auto;
+    background-color: white;
+
+}
+
+#cadre-inscription h2 {
+    text-align: center;
+    font-size: 15px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px;
+    font-weight: bold;
+
+
+}
+
+#ci-1 {
+    width: 20%;
+    height: 600px;
+    background-color: whitesmoke;
+    float: left;
+    margin: 5px;
+}
+
+#ci-1 h1 {
+    text-align: center;
+    font-size: 13px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+
+
+}
+
+#ci-1 #contenu {
+    width: 90%;
+    height: 510px;
+    margin: auto;
+    background-color: white;
+    overflow: auto;
+
+
+}
+
+#ajouter-annee {
+    font-size: 12px;
+    text-align: center;
+
+
+}
+
+#ci-1 #contenu li {
+    text-align: center;
+    display: block;
+    font-size: 13px;
+    border-bottom: solid 2px whitesmoke;
+    padding: 5px;
+
+}
+
+#ci-1 #contenu li a {
+    color: grey;
+    font-size: 13px;
+}
+
+#ci-1 #contenu li a:hover {
+    color: black;
+}
+
+
+#ci-2 {
+
+    width: 78%;
+    height: 600px;
+    float: right;
+    margin: 5px;
+
+
+}
+
+#ci-2 h2 {
+    text-align: center;
+    font-size: 15px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 2px 2px;
+
+
+}
+
+
+#cadre-inscription .form #div_id_numero {
+
+    width: 100%;
+
+
+}
+
+#cadre-inscription .form #div_id_nom {
+
+    width: 100%;
+
+
+}
+
+
+#table {
+    width: 100%;
+    margin: auto;
+
+
+}
+
+#cadre-tete-table {
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    background-color: red;
+
+
+}
+
+
+#infos-etudiants #cadre tbody td {
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid gainsboro;
+
+
+}
+
+
+#tete-table {
+
+    font-size: 13px;
+    font-weight: bold;
+    background-color: black;
+    color: whitesmoke;
+
+
+}
+
+#tete-table th {
+    text-align: center;
+    border: 2px solid #222222;
+
+
+}
+
+
+#footer {
+    width: 100%;
+    text-align: center;
+    background-color: gainsboro;
+    padding: 1px;
+}
+
+#footer p {
+
+
+}
+
+
+#div_id_nom {
+
+    width: 48%;
+    float: right;
+
+
+}
+
+
+#div_id_prenom {
+    width: 48%;
+    float: left;
+
+}
+
+#div_id_naissance {
+
+    width: 48%;
+    float: left;
+
+}
+
+#div_id_lieu {
+    width: 48%;
+    float: right;
+
+}
+
+
+#div_id_pere {
+
+    width: 48%;
+    float: left;
+
+}
+
+#div_id_mere {
+    width: 48%;
+    float: right;
+
+}
+
+
+#div_id_numero {
+
+    width: 48%;
+    float: left;
+
+}
+
+#div_id_urgent {
+    width: 48%;
+    float: right;
+
+}
+
+
+#cadre-message {
+    text-align: center;
+    width: 95%;
+    height: 50px;
+    margin: auto;
+    border-radius: 0px;
+
+
+}
+
+#fermer-recu {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+
+
+}
+
+#fermer-recu a :hover {
+    color: red;
+
+
+}
+
+#fermer-recu span {
+    float: right;
+    margin: 5px;
+
+
+}
+
+
+#cadre-recu {
+    width: 90%;
+    height: 450px;
+    margin: auto;
+    box-shadow: 5px 5px 5px 5px grey;
+    background-color: white;
+
+
+}
+
+#cadre-recu h3 {
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+
+}
+
+#cadre-recu h3 span {
+    color: red;
+
+}
+
+#info-etablissement {
+    width: 50%;
+    margin: auto;
+    height: 120px;
+    margin-top: 30px;
+
+
+}
+
+
+#info-etablissement #cadre-infos {
+    width: 100%;
+    text-align: center;
+
+
+}
+
+#info-etablissement #cadre-infos span {
+    font-size: 13px;
+
+
+}
+
+
+#info-etablissement #cadre-infos #sp {
+
+
+}
+
+
+#info-etablissement h1 {
+
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+
+
+}
+
+#cadre-recu p {
+    margin-top: 50px;
+
+}
+
+#cadre-recu p span {
+    font-weight: bold;
+
+}
+
+#cadre-siganture {
+
+
+}
+
+
+#cadre-siganture span {
+
+    float: right;
+    margin-top: 90px;
+    color: grey;
+
+
+}
+
+
+#cadre-siganture #cadre-img img {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin-top: 100px;
+    float: left;
+
+
+}
+
+#cadre-filtre-classe {
+
+
+}
+
+
+#cadre-filtre-classe #cadre-annee {
+    width: 15%;
+    height: 580px;
+    float: left;
+    background-color: white;
+    margin: 5px;
+
+
+}
+
+#cadre-filtre-classe #cadre-annee #cadre-contenu {
+    width: 90%;
+    margin: auto;
+    height: 560px;
+    background-color: whitesmoke;
+    overflow: auto;
+    text-align: center;
+
+}
+
+
+#cadre-filtre-classe #cadre-annee #cadre-contenu li {
+    display: block;
+    border-bottom: 1px solid lightyellow;
+    margin: 5px;
+
+}
+
+#cadre-filtre-classe #cadre-annee #cadre-contenu li a {
+    color: grey;
+    font-size: 13px;
+
+}
+
+#cadre-filtre-classe #cadre-annee #cadre-contenu li a:hover {
+    color: black;
+
+
+}
+
+
+#cadre-filtre-classe #cadre-annee h1 {
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+
+}
+
+
+#cadre-filtre-classe #table {
+    width: 83%;
+    float: right;
+    box-shadow: 2px 2px 2px 2px;
+
+}
+
+#matiere-classe {
+    width: 100%;
+    padding: 5px;
+
+
+}
+
+#matiere-classe #d1 {
+    text-align: center;
+    margin-top: 20px;
+    background-color: whitesmoke;
+
+
+}
+
+#matiere-classe #d1 span {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: grey;
+
+
+}
+
+#matiere-classe #d1 h1 {
+
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px;
+    color: black;
+    font-size: 20px;
+
+
+}
+
+#imprimer {
+    float: right;
+    margin-top: 10px;
+    border: none;
+    background-color: gainsboro;
+    opacity: 0.8;
+    cursor: pointer;
+
+}
+
+#imprimer:hover {
+    opacity: 1;
+}
+
+#imprimer-classe {
+    visibility: hidden;
+    height: 0px;
+    overflow: auto;
+
+
+}
+
+#imprimer-salaire {
+    visibility: hidden;
+    height: 0px;
+    overflow: auto;
+
+
+}
+
+
+
+
+#cadre-badge {
+    width: 74%;
+    height: 600px;
+    float: right;
+    background-color: whitesmoke;
+    text-align: center;
+
+}
+
+
+#badge {
+    width: 340px;
+    height: 220px;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    background-size: cover;
+
+}
+
+#badge img {
+
+
+}
+
+#photo-badge {
+    position: absolute;
+    width: 80px;
+    height: 75px;
+    margin-top: 75px;
+    margin-left: 35px;
+
+}
+
+
+#annee-badge {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+
+}
+
+
+#logo-badge {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    margin-left: 230px;
+    margin-top: 22px;
+
+
+}
+
+#nom-badge {
+    position: absolute;
+    margin-left: 140px;
+    margin-top: -100px;
+    font-weight: bold;
+    font-size: 15px;
+
+
+}
+
+
+#matricule-badge {
+    position: absolute;
+    margin-top: -20px;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 20px;
+
+
+}
+
+#naissance-badge {
+    position: absolute;
+    margin-left: 140px;
+    margin-top: -80px;
+    font-size: 10px;
+    color: grey;
+
+
+}
+
+
+#button-imprimer {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+
+#menu-etablissement {
+
+
+}
+
+
+#menu-etablissement li {
+    display: block;
+    font-size: 15px;
+    border-bottom: 2px solid white;
+    padding: 10px;
+
+
+}
+
+#menu-etablissement li img {
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+
+
+}
+
+
+#menu-etablissement li a {
+    display: block;
+    font-size: 15px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 35px;
+    font-weight: bold;
+
+}
+
+
+#hint_id_password1 {
+    position: absolute;
+    visibility: hidden;
+
+}
+
+#hint_id_password2 {
+    position: absolute;
+    visibility: hidden;
+
+}
+
+#hint_id_username {
+    position: absolute;
+    visibility: hidden;
+
+}
+
+#div_id_is_superuser {
+    margin-top: 10px;
+}
+
+
+#ajouter {
+    margin-top: 10px;
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+    color: #0a53be;
+    font-weight: bold;
+
+}
+
+
+#ajouter:hover {
+
+    color: red;
+
+}
+
+
+#ajouter-inscrit {
+    margin-top: 10px;
+    font-size: 12px;
+    float: right;
+    cursor: pointer;
+    color: #0a53be;
+    font-weight: bold;
+
+}
+
+
+#ajouter-inscrit:hover {
+    color: red;
+
+}
+
+
+#cadre-ajouts {
+    width: 50%;
+    background-color: whitesmoke;
+    margin: auto;
+    margin-top: -75vh;;
+    z-index: 1000;
+    box-shadow: 10px 10px 10px 10px black;
+    position: relative;
+
+}
+
+
+#cadre-ajouts #form {
+    width: 95%;
+
+
+}
+
+
+.cadre-ajouts #div_id_numero {
+    float: right;
+
+}
+
+#titre-enregistrer{
+    text-align: center;
+    font-size: 13px;
+    color: black;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 2px ;
+}
+
+
+#cadre-form{
+    background-color:whitesmoke;
+    width: 50%;
+    margin: auto;
+
+}
+
+
+#cadre-form2{
+    background-color:whitesmoke;
+    width: 70%;
+    margin: auto;
+
+}
+
+
+
+#cadre-form2 #form {
+    width: 75% ;
+    overflow: auto ; height: 450px
+
+}
+
+#cadre-recu-salaire{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    background-color: whitesmoke;
+
+
+}
+
+#recu-salaire{
+    width: 90%;
+    height: 450px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px black;
+
+
+}
+
+
+
+
+
+
+

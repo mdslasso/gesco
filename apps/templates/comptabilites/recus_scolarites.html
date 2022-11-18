@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+    <div id="cadre-etudiants">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants">
+
+
+
+            <div id="cadre" style="height: 80vh;">
+
+
+
+
+            <br>
+
+             <div id="menu-comptabilite">
+
+
+                    {% include 'includes/menu_scolarite.html' %}
+
+
+            </div>
+
+
+               <div id="cadre-comptabilite" >
+
+
+
+                 <div style="width: 90%;margin: auto">
+
+
+                                   <div style="float: right;" >
+
+                      <a style="margin-left: -20px" href="javascript:history.back()">
+
+                          <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                          </span>
+
+
+
+                      </a>
+
+
+                   </div>
+
+                     <h1 id="titre-enregistrer">
+
+                                 <span>
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                        <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+                        <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                        </svg>
+                                 </span>
+
+                         IMPRIMER LE REÇU
+
+                        </h1>
+
+                 </div>
+
+
+
+
+
+                   <div id="cadre-recu">
+
+                       <div style="width: 90%; margin: auto;">
+
+                       <h3 style="text-align: center;">Reçu de paiement No: <span style="color: red"> {{ recu.id }}</span></h3>
+
+                       <div id="info-etablissement">
+
+
+
+
+                            {% for etablissement in etablissements %}
+
+
+
+                                <div id="cadre-infos">
+
+                                <h1 >{{  etablissement.nom.upper }}</h1>
+
+                               <div id="elements">
+
+                                <span> <span id="sp"></span> {{ etablissement.adresse  }}</span><br>
+                                <span>  <span id="sp">Tel : </span> {{ etablissement.numero  }}</span><br>
+                                <span>  <span id="sp">Email : </span> {{ etablissement.email  }}</span><br>
+
+                                </div>
+
+                                </div>
+
+
+
+
+
+
+                       </div>
+
+                       <p> Nous avons bien reçu le <span style="font-weight: bold"> {{ recu.date }} </span> la somme de <span style="font-weight: bold"> {{ recu.payement }} GNF</span> pour le compte de M./Mme <span style="font-weight: bold">{{ recu.etudiant.etudiant.prenom }}  {{ recu.etudiant.etudiant.nom }}</span>. </p>
+
+
+
+                           <div id="cadre-siganture">
+
+
+
+                                 <span> Signature</span>
+
+
+                           </div>
+
+
+                         {% endfor %}
+
+
+
+                     </div>
+
+
+                   </div>
+
+
+
+
+               <div style="width: 100%; text-align: center; margin-top: 25px">
+
+
+                    <input  title="Imprimer le Badge"   type="button" onclick="printDiv2()" value="Imprimer le reçu" />
+
+
+                   </div>
+
+
+
+               </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

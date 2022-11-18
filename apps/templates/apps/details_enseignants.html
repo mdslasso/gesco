@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load django_template_maths %}
+
+
+
+{% block body %}
+    <div  id="container">
+
+
+        <div id="menu-etudiants">
+
+           {% include 'includes/menu.html' %}
+
+
+        </div>
+
+
+        <div id="infos-etudiants" >
+
+
+
+
+
+           {% include 'includes/messages.html' %}
+
+
+            <div id="cadre" style="">
+
+
+
+
+
+
+
+
+                <div style="" id="cadre-details-infos" >
+
+
+
+                    <div id="photo">
+
+                        {% if enseignant.photo %}
+
+                            <img  src="{{ enseignant.photo.url }}"/>
+
+                        {% else %}
+
+                            <img src="{% static 'apps/img/user.png' %}"/>
+
+                        {% endif %}
+
+                      <p><a href="{% url 'apps:changer-photo-enseignants' enseignant.id %}">Changer photo</a></p>
+
+                    </div>
+
+                    <div id="infos" style="">
+
+
+
+                        <div id="details" style=" height: 550px">
+
+
+
+                            <h1 style="text-align: center; margin-top: 10px; font-size: 25px; color: grey; box-shadow: 2px 2px 2px 2px"> MATRICULE : <span style="color: red; font-weight: bold"> {{ enseignant.matricule  }}</span>
+
+
+                                <div style="float: right;">
+
+                      <a style="margin-left: -20px" href="{% url 'apps:enseignants' %}">
+
+                          <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                          <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                          </span>
+
+
+
+                      </a>
+
+
+                   </div>
+                            </h1>
+
+                            <br>
+
+                         <div id="c1">
+
+                            <h5> Nom: <span>{{ enseignant.nom }}</span></h5>
+                            <h5> Prénom: <span>{{ enseignant.prenom }}</span></h5>
+
+
+
+                          </div>
+
+                          <div id="c2">
+
+                            <h5> Date de naissance: <span>{{ enseignant.naissance  }}</span></h5>
+                             <h5> Numéro: <span>{{ enseignant.numero }}</span></h5>
+
+
+
+                          </div>
+
+
+                    <div class="col-md-12" id="matiere-classe">
+
+                        <div class="row" style="width: 100%; margin: auto">
+
+                            <div id="d1" class="col-md-6">
+                                <h1>MATIÈRES</h1>
+
+                                {% for matiere in enseignant.matiere.all %}
+
+                                    <span>{{ matiere  }}</span> <br>
+
+                                {% endfor %}
+
+
+
+                            </div>
+
+                            <div  id="d1" class="col-md-6" style=" border-left: 1px solid grey;">
+
+                                 <h1>CLASSES</h1>
+
+                                 {% for classe in enseignant.classe.all %}
+
+                                     <span>{{ classe  }}</span> <br>
+
+                                 {% endfor %}
+
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                     <div id="info-bas-enseignant">
+
+
+                                <li><a class="btn btn-success" href="{% url 'apps:modifier-enseignants' enseignant.id%}">Modifier</a></li>
+                                <li><a class="btn btn-danger" href="{% url 'apps:supprimer-enseignants' enseignant.id%}">Supprimer</a></li><br><br>
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+
