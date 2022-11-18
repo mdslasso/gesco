@@ -4,74 +4,53 @@
 
 
 {% block body %}
-    <div  id="container">
+    <div id="container">
 
 
-    <div id="cadre-home">
+        <div id="cadre-home">
 
 
+            <div id="mini">
 
-                <div id="mini" >
+                <img src="{% static 'apps/img/etudiant.png' %}"><br><br>
 
-                    <img src="{% static 'apps/img/etudiant.png' %}"><br><br>
+                <a href="{% url 'apps:etudiants' %}">Étudiants</a>
 
-                    <a href="{% url 'apps:etudiants' %}">Étudiants</a>
+            </div>
 
-                </div>
+            <div id="mini">
 
-                <div id="mini" >
-
-                    <img src="{% static 'apps/img/enseignant.png' %}"><br><br>
-
-
-                    <a href="">Enseignants</a>
-
-                </div>
+                <img src="{% static 'apps/img/enseignant.png' %}"><br><br>
 
 
+                <a href="{% url 'apps:enseignants' %}">Enseignants</a>
+
+            </div>
 
 
+            <div id="mini">
+
+                <img src="{% static 'apps/img/comptabilite.png' %}"><br><br>
 
 
-
-         <div id="mini" >
-
-                    <img src="{% static 'apps/img/comptabilite.png' %}"><br><br>
+                <a href="{% url 'apps:comptabilite' %}">Comptabilité</a>
 
 
-                    <a href="">Comptabilité</a>
+            </div>
 
 
-                </div>
+            <div id="mini">
+
+                <img src="{% static 'apps/img/parametres.png' %}"><br><br>
 
 
-         <div id="mini" >
-
-                    <img src="{% static 'apps/img/parametres.png' %}"><br><br>
+                <a href="{% url 'apps:configurations' %}">Configuration</a>
 
 
-                    <a href="">Configuration</a>
+            </div>
 
 
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
+        </div>
 
 
     </div>
