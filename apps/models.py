@@ -148,7 +148,8 @@ class Enseignant(models.Model):
         ordering = ('prenom',)
 
     def __str__(self):
-        return str(self.prenom + ' ' + self.nom + ' - Matircule : ' + self.matricule + ' - Numero : ' + self.numero)
+        return str(
+            self.prenom + ' ' + self.nom + ' - Matircule : ' + str(self.matricule) + ' - Numero : ' + self.numero)
 
 
 class Salaire(models.Model):
