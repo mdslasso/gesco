@@ -7,27 +7,37 @@
 
 
 
-    <div  class="container">
+    <div class="container">
 
-            <form id="form-login" method="post" enctype="multipart/form-data">
+        <form id="form-login" method="post" enctype="multipart/form-data">
 
-                <h1 style="text-align: center">GESCO</h1><br>
+            <h1 style="text-align: center">GESCO </h1><br>
 
-                {% csrf_token %}
+            {% csrf_token %}
 
                 {{ form|crispy }}
 
 
-                <div class="form-group">
-                    <br>
+            <div class="form-group">
+                <br>
 
-                    <button class="btn btn-danger" type="submit">Se Connecter</button>
+                <button class="btn btn-danger" type="submit">Se Connecter</button>
 
-                </div><br><br><br><br>
+            </div>
+            <br><br>
 
-            </form>
+            <div style="width: 50%; margin: auto">
+                <span>Nom d’utilisateur : demo</span><br>
+                <span>Mot de passe : demo</span>
 
 
+            </div>
+
+        </form>
+        <br><br>
+
+
+        <h1 style="text-align: center">GESCO - Logiciel de Gestion d'établissement version test </h1><br>
 
 
     </div>

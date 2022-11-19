@@ -83,7 +83,7 @@ class Etudiant(models.Model):
     mere = models.CharField(max_length=250, verbose_name="Nom de la mère")
     numero = models.CharField(max_length=250, verbose_name="Numéro", blank=True, unique=True)
     urgent = models.CharField(max_length=250, verbose_name="Numéro à contacter en cas d'urgence")
-    matricule = models.IntegerField(verbose_name="Matricule", unique=True)
+    matricule = models.IntegerField(verbose_name="Matricule", unique=True, null=True)
     photo = models.ImageField(upload_to='Photo/images', verbose_name="Choisir la photo", blank=True)
 
     def get_absolute_url(self):
@@ -135,7 +135,7 @@ class Enseignant(models.Model):
     prenom = models.CharField(max_length=250, verbose_name="Prénom")
     naissance = models.CharField(max_length=250, verbose_name="Date de naissance", default="01.01.2022")
     numero = models.CharField(max_length=250, verbose_name="Numero", unique=True)
-    matricule = models.IntegerField(verbose_name="Matricule", unique=True)
+    matricule = models.IntegerField(verbose_name="Matricule", unique=True, null=True)
     matiere = models.ManyToManyField(Matiere, verbose_name="Matières", related_name='area')
     classe = models.ManyToManyField(Classe, verbose_name="Classes")
     photo = models.ImageField(upload_to='Photo/images', verbose_name="Choisir la photo", blank=True)

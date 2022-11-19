@@ -12,9 +12,12 @@
 
             <div id="mini">
 
+
                 <img src="{% static 'apps/img/etudiant.png' %}"><br><br>
 
-                <a href="{% url 'apps:etudiants' %}">Étudiants</a>
+                <a href="{% url 'apps:etudiants' %}">Étudiants <span
+                        style="color: red">({{ etudiants.count }})</span></a><br>
+
 
             </div>
 
@@ -23,7 +26,8 @@
                 <img src="{% static 'apps/img/enseignant.png' %}"><br><br>
 
 
-                <a href="{% url 'apps:enseignants' %}">Enseignants</a>
+                <a href="{% url 'apps:enseignants' %}">Enseignants <span
+                        style="color: red">({{ enseignants.count }})</span></a>
 
             </div>
 
@@ -45,6 +49,17 @@
 
 
                 <a href="{% url 'apps:configurations' %}">Configuration</a>
+
+
+            </div>
+
+
+            <div id="mini">
+
+                <img src="{% static 'apps/img/logout.png' %}"><br><br>
+
+
+                <a href="{% url 'apps:logout' %}">Déconnexion</a>
 
 
             </div>

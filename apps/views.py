@@ -16,7 +16,17 @@ def erreur_404(request, exception):
 
 
 def home(request):
-    return render(request, 'apps/home.html')
+    etudiants = Etudiant.objects.all().order_by('id')
+    enseignants = Enseignant.objects.all().order_by('id')
+
+    context = {
+
+        'etudiants': etudiants,
+        'enseignants': enseignants,
+
+    }
+
+    return render(request, 'apps/home.html', context)
 
 
 # --------------------------------ETUDIANTS-----------------------------------
@@ -987,9 +997,8 @@ class SearchEtudiant(ListView):
         if query is not None:
             prenom_results = Etudiant.objects.filter(Q(prenom__icontains=query))
             nom_results = Etudiant.objects.filter(Q(nom__icontains=query))
-            numero_results = Etudiant.objects.filter(Q(numero__icontains=query))
             matricule_results = Etudiant.objects.filter(Q(matricule__icontains=query))
-            queryset_chain = chain(prenom_results, nom_results, numero_results, matricule_results)
+            queryset_chain = chain(prenom_results, nom_results, matricule_results)
 
             qs = sorted(queryset_chain, key=lambda instance: instance.pk, reverse=True)
             self.count = len(qs)
@@ -1025,9 +1034,8 @@ class SearchEnseignant(ListView):
         if query is not None:
             prenom_results = Enseignant.objects.filter(Q(prenom__icontains=query))
             nom_results = Enseignant.objects.filter(Q(nom__icontains=query))
-            numero_results = Enseignant.objects.filter(Q(numero__icontains=query))
             matricule_results = Enseignant.objects.filter(Q(matricule__icontains=query))
-            queryset_chain = chain(prenom_results, nom_results, numero_results, matricule_results)
+            queryset_chain = chain(prenom_results, nom_results, matricule_results)
 
             qs = sorted(queryset_chain, key=lambda instance: instance.pk, reverse=True)
             self.count = len(qs)
@@ -1062,9 +1070,8 @@ class SearchInscription(ListView):
         if query is not None:
             prenom_results = Inscription.objects.filter(Q(etudiant__prenom__icontains=query))
             nom_results = Inscription.objects.filter(Q(etudiant__nom__icontains=query))
-            numero_results = Inscription.objects.filter(Q(etudiant__numero__icontains=query))
             matricule_results = Inscription.objects.filter(Q(etudiant__matricule__icontains=query))
-            queryset_chain = chain(prenom_results, nom_results, numero_results, matricule_results)
+            queryset_chain = chain(prenom_results, nom_results, matricule_results)
 
             qs = sorted(queryset_chain, key=lambda instance: instance.pk, reverse=True)
             self.count = len(qs)
@@ -1075,7 +1082,7 @@ class SearchInscription(ListView):
 
 class SearchPaiements(ListView):
     model = Inscription
-    template_name = 'apps/scolarites.html'
+    template_name = 'comptabilites/scolarites.html'
     paginate_by = 15
     count = 0
 
@@ -1098,9 +1105,8 @@ class SearchPaiements(ListView):
         if query is not None:
             prenom_results = Inscription.objects.filter(Q(etudiant__prenom__icontains=query))
             nom_results = Inscription.objects.filter(Q(etudiant__nom__icontains=query))
-            numero_results = Inscription.objects.filter(Q(etudiant__numero__icontains=query))
             matricule_results = Inscription.objects.filter(Q(etudiant__matricule__icontains=query))
-            queryset_chain = chain(prenom_results, nom_results, numero_results, matricule_results)
+            queryset_chain = chain(prenom_results, nom_results, matricule_results)
 
             qs = sorted(queryset_chain, key=lambda instance: instance.pk, reverse=True)
             self.count = len(qs)
@@ -1135,9 +1141,8 @@ class SearchBadge(ListView):
         if query is not None:
             prenom_results = Etudiant.objects.filter(Q(prenom__icontains=query))
             nom_results = Etudiant.objects.filter(Q(nom__icontains=query))
-            numero_results = Etudiant.objects.filter(Q(numero__icontains=query))
             matricule_results = Etudiant.objects.filter(Q(matricule__icontains=query))
-            queryset_chain = chain(prenom_results, nom_results, numero_results, matricule_results)
+            queryset_chain = chain(prenom_results, nom_results, matricule_results)
 
             qs = sorted(queryset_chain, key=lambda instance: instance.pk, reverse=True)
             self.count = len(qs)
