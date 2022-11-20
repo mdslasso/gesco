@@ -19,21 +19,26 @@
 
 
 
-<div id="header">
-
-</div>
-
-
-
 {% autoescape off %}
 
 
+{% if user.is_authenticated %}
     {% block body %}
 
 
 
     {% endblock body %}
 
+{% else %}
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h1 style="text-align: center; font-size: 20px"> Pas d'accès veuillez <a href="{% url 'apps:login' %}">
+
+        vous connecter </a> pour accéder a <span style="color: red"> Gesco</span> <br><br> Merci !!! </h1>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endif %}
 
 
 {% endautoescape %}
