@@ -638,21 +638,44 @@ class ModifierCharges(SuccessMessageMixin,UpdateView):
 
         return context
 
-class SupprimerCharge(SuccessMessageMixin,DeleteView):
+
+class SupprimerCharge(SuccessMessageMixin, DeleteView):
     model = Charge
     template_name = 'comptabilites/supprimer_charges.html'
-
 
     def get_success_url(self):
         return reverse('apps:charges')
 
 
+def statistiques(request):
+    annees = Rentree.objects.all().order_by('-id')
+    inscriptions = Inscription.objects.all().order_by('annee')
+    salaires = Salaire.objects.all().order_by('-id')
+    etudiants = Etudiant.objects.all().order_by('id')
+    classes = Classe.objects.all().order_by('id')
+    etablissements = Etablissement.objects.all().order_by('id')[:1]
+    enseignants = Enseignant.objects.all().order_by('prenom')
+
+    salaires_filters = Salaire.objects.all().order_by('-id')
+    myFilter = SalaireFilter(request.GET, queryset=salaires_filters)
+    salaires_filters = myFilter.qs
+
+    context = {
+        'annees': annees,
+        'inscriptions': inscriptions,
+        'etudiants': etudiants,
+        'etablissements': etablissements,
+        'classes': classes,
+        'myFilter': myFilter,
+        'enseignants': enseignants,
+        'salaires_filters': salaires_filters,
+        'salaires': salaires,
+    }
+
+    return render(request, 'comptabilites/statistiques.html', context)
+
+
 # --------------------------------COMPTABILITES-----------------------------------
-
-
-
-
-
 
 
 # --------------------------------BADGES-----------------------------------

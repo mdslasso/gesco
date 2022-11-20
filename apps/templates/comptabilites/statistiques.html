@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block body %}
+    <div id="container">
+
+
+        <div id="cadre-etudiants">
+
+
+            <div id="menu-etudiants">
+
+                {% include 'includes/menu_comptabilite.html' %}
+
+
+            </div>
+
+
+            <div id="infos-etudiants">
+
+
+                <br>
+                <div id="cadre" style="height: 82vh;overflow:hidden">
+
+
+                    <div id="cadre-home">
+
+                        <img style="width: 300px; height: 300px" src="{% static 'apps/img/statistiques.png' %}">
+                        <br><br>
+
+
+                        <h1 style="text-align: center; font-size: 20px">LES STATISTIQUES SERONT DISPONIBLE SUR LA
+                            VERSION
+                            FINALE DE <span style="color: red"> GESCO</span></h1>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+{% endblock body %}
+

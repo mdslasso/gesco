@@ -34,18 +34,18 @@ urlpatterns = [
     path('supprimer-paiements.html/<int:pk>/', views.SupprimerPaiements.as_view(), name='supprimer-paiements'),
     path('recu-paiements.html/<int:pk>/', views.RecuPaiements.as_view(), name='recu-paiements'),
 
-
     path('salaires.html/', views.salaires, name='salaires'),
     path('ajouter-salaires.html/', views.AjouterSalaires.as_view(), name='ajouter-salaires'),
     path('modifier-salaires.html/<int:pk>/', views.ModifierSalaires.as_view(), name='modifier-salaires'),
     path('supprimer-salaires.html/<int:pk>/', views.SupprimerSalaires.as_view(), name='supprimer-salaires'),
     path('imprimer-salaires.html/<int:pk>/', views.ImprimerSalaires.as_view(), name='imprimer-salaires'),
 
-
     path('charges.html/', views.charges, name='charges'),
     path('ajouter-charges.html/', views.AjouterCharges.as_view(), name='ajouter-charges'),
-   path('modifier-charges.html/<int:pk>/', views.ModifierCharges.as_view(), name='modifier-charges'),
-   path('supprimer-charges.html/<int:pk>/', views.SupprimerCharge.as_view(), name='supprimer-charges'),
+    path('modifier-charges.html/<int:pk>/', views.ModifierCharges.as_view(), name='modifier-charges'),
+    path('supprimer-charges.html/<int:pk>/', views.SupprimerCharge.as_view(), name='supprimer-charges'),
+
+    path('statistiques.html/', views.statistiques, name='statistiques'),
 
     path('inscriptions.html/', views.inscriptions, name='inscriptions'),
     path('details-inscriptions.html/<int:pk>/', views.details_inscriptions, name='details-inscriptions'),

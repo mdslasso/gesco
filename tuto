@@ -8,5 +8,9 @@ nativefier "http://127.0.0.1:8000/"
  nativefier --name 'Gesco' 'http://127.0.0.1:8000/'
  python manage.py collectstatic
 
+   git status
+   git add -A
+   git commit -m "launching to production"
+   git push heroku master
 
 
