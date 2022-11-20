@@ -30,7 +30,7 @@
 
                                    <li>
                                     <span> {% if etudiant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %}</span>
-                                   <a href="{% url 'apps:details_badges' etudiant.id %}">  {{ etudiant.prenom }} {{ etudiant.nom }}  </a>- <span style="color:grey ; font-size: 12px">  Matricule : <span style="color: red; font-weight: bold"> {{ etudiant.matricule }} </span> </span>
+                                   <a href="{% url 'apps:details_badges' etudiant.id %}">  <span style="color: red; font-weight: bold"> {{ etudiant.matricule }} </span> - {{ etudiant.prenom }} {{ etudiant.nom }}  </a>- <span style="color:grey ; font-size: 12px">   </span>
 
                                    </li>
 
@@ -50,7 +50,8 @@
 
                          <li>
                              <span> {% if etudiant.photo %}<img style="width: 40px; height: 40px; border-radius: 200px" src="{{ etudiant.photo.url }}"/> {% else %}<img style="width: 40px; height: 40px" src="{% static 'apps/img/user.png' %}"/>  {% endif %}</span>
-                             <a href="{% url 'apps:details_badges' etudiant.id %}">  {{ etudiant.prenom }} {{ etudiant.nom }}  </a>- <span style="color:grey ; font-size: 12px">  Matricule : <span style="color: red; font-weight: bold"> {{ etudiant.matricule }} </span> </span>
+
+                             <a href="{% url 'apps:details_badges' etudiant.id %}">  <span style="color: red; font-weight: bold"> {{ etudiant.matricule }} </span> - {{ etudiant.prenom }} {{ etudiant.nom }}  </a>
 
                          </li>
 
