@@ -18,27 +18,34 @@
 
 <body>
 
+<h1 id="infos-gesco" style="">Pas de version mobile pour Gesco</h1>
+
 
 {% autoescape off %}
 
 
-{% if user.is_authenticated %}
-    {% block body %}
+<div id="cacher">
+
+    {% if user.is_authenticated %}
+
+        {% block body %}
 
 
 
-    {% endblock body %}
+        {% endblock body %}
 
-{% else %}
-    <br><br><br><br><br><br><br><br><br><br>
+    {% else %}
+        <br><br><br><br><br><br><br><br><br><br>
 
-    <h1 style="text-align: center; font-size: 20px"> Pas d'accès veuillez <a href="{% url 'apps:login' %}">
+        <h1 style="text-align: center; font-size: 20px"> Pas d'accès veuillez <a href="{% url 'apps:login' %}">
 
-        vous connecter </a> pour accéder a <span style="color: red"> Gesco</span> <br><br> Merci !!! </h1>
+            vous connecter </a> pour accéder a <span style="color: red"> Gesco</span> <br><br> Merci !!! </h1>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-{% endif %}
+    {% endif %}
+
+</div>
 
 
 {% endautoescape %}
@@ -51,12 +58,12 @@
 
 <script src="{% static 'apps/js/bootstrap.bundle.min.js' %}"></script>
 <script src="{% static 'apps/js/bootstrap.popper.min.js' %}"></script>
-<script src="{% static 'apps/js/jquery.js' %}"> </script>
-<script src="{% static 'apps/js/js.js' %}"> </script>
-<script src="{% static 'apps/js/css.js' %}"> </script>
-
-
+<script src="{% static 'apps/js/jquery.js' %}"></script>
+<script src="{% static 'apps/js/js.js' %}"></script>
+<script src="{% static 'apps/js/css.js' %}"></script>
 
 
 </body>
+
+
 </html>
