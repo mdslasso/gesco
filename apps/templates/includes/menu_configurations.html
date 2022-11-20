@@ -25,10 +25,48 @@
 
 <nav id="cadre1">
 
+
     <li>
-        <img src="{% static 'apps/img/parametres.png' %}">
-        <a href="{% url 'apps:configurations' %}">Configurations</a>
+        <img src="{% static 'apps/img/etablissement.png' %}">
+        {% for etablissement in  etablissements %}
+
+            <a href="{% url 'apps:configurer-etablissement' etablissement.id %}">Établissement</a>
+
+        {% endfor %}
     </li>
+
+    <li>
+        <img src="{% static 'apps/img/calendrier.png' %}">
+        <a href="{% url 'apps:rentree-scolaire' %}">Rentrée Scolaire</a>
+    </li>
+
+    <li>
+        <img src="{% static 'apps/img/matiere.png' %}">
+        <a href="{% url 'apps:matieres' %}">Matières</a>
+    </li>
+
+    <li>
+        <img src="{% static 'apps/img/classe.png' %}">
+        <a href="{% url 'apps:classes' %}">Classes</a>
+    </li>
+
+    {% if user.is_superuser %}
+        <li style="margin-left: -5px">
+            <<img src="{% static 'apps/img/user.png' %}">
+            <a href="{% url 'apps:utilisateurs' %}">Utilisateurs</a>
+        </li>
+
+    {% else %}
+
+        <li style="margin-left: -5px">
+            <img src="{% static 'apps/img/user.png' %}">
+            <a href="">Utilisateurs</a>
+        </li>
+
+
+
+    {% endif %}
+
 
 </nav>
 

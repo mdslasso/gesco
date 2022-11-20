@@ -37,61 +37,66 @@
                     {% include 'includes/menu_badge.html' %}
 
 
-            </div>
+             </div>
 
 
+                <div id="cadre-badge">
+
+                    {% include 'includes/messages.html' %}
 
 
-
-                <div  id="cadre-badge"  >
-
-                {% include 'includes/messages.html' %}
+                    <div id="badge">
 
 
-                    <div id="badge" >
+                        {% if etudiant.photo %}
 
-
-
-
-                        {% if etudiant.photo %}<img id="photo-badge" src="{{ etudiant.photo.url }}"/> {% else %}<img id="photo-badge" src="{% static 'apps/img/user.png' %}"/>  {% endif %}
+                            <img id="photo-badge" src="{{ etudiant.photo.url }}"/> {% else %}
+                            <img id="photo-badge" src="{% static 'apps/img/user.png' %}"/>  {% endif %}
 
 
                         {% for etablissement in etablissements %}
 
-                              <h1 id="annee-badge">{{etablissement.nom.upper }}</h1>
+                            <h1 id="annee-badge">{{ etablissement.nom.upper }}</h1>
 
-                          <img id="logo-badge" src="{{etablissement.logo.url }}">
+
+
+                            {% if etablissement.logo %}
+
+                                <img id="logo-badge" src="{{ etablissement.logo.url }}">
+
+                            {% else %}
+
+                                <img id="logo-badge" src="{% static 'apps/img/logo-default.png' %}"/>
+
+                            {% endif %}
+
+
+
 
                         {% endfor %}
 
 
 
-                        
-                        <img id="badge-img" style="width: 340px; height: 220px; border: 2px solid grey; border-radius: 10px; margin: auto;" src="{% static 'apps/img/badge-vierge.png' %}">
 
+                        <img id="badge-img"
+                             style="width: 340px; height: 220px; border: 2px solid grey; border-radius: 10px; margin: auto;"
+                             src="{% static 'apps/img/badge-vierge.png' %}">
 
 
                         <h1 id="nom-badge"> {{ etudiant.prenom.upper }} {{ etudiant.nom.upper }}</h1>
                         <h1 id="naissance-badge">{{ etudiant.naissance }}</h1>
 
-                        <h1 id="matricule-badge"> Matricule : <span style="color: red; font-size: 11px"> {{ etudiant.matricule }} </span> </h1>
-
-
+                        <h1 id="matricule-badge"> Matricule : <span
+                                style="color: red; font-size: 11px"> {{ etudiant.matricule }} </span></h1>
 
 
                     </div>
 
-                    <input title="Imprimer le badge" id="button-imprimer"    type="button" onclick="printDiv4()" value="Imprimer le badge" /> </span>
+                    <input title="Imprimer le badge" id="button-imprimer" type="button" onclick="printDiv4()"
+                           value="Imprimer le badge"/> </span>
 
 
-
-
-
-                   </div>
-
-
-
-
+                </div>
 
 
             </div>
